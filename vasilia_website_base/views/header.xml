@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========= 布局片段（主语言：简体中文。英文站通过 vasilia_website_base/i18n/en_US.po 翻译） ========= -->
+    <template id="lweb_topnav" name="L Web Topnav">
+        <t t-set="lweb_current" t-value="((request.lang and request.lang.code) or request.env.context.get('lang') or (request.website.default_lang_id and request.website.default_lang_id.code) or '').lower()"/>
+        <t t-set="lweb_resolved" t-value="False"/>
+        <t t-foreach="request.website.language_ids" t-as="lweb_lang">
+            <t t-if="not lweb_resolved and ((lweb_lang.code or '').lower() != lweb_current)">
+                <t t-set="lweb_resolved" t-value="lweb_lang"/>
+            </t>
+        </t>
+        <style type="text/css">
+            .topnav{
+                position:fixed;top:0;left:0;right:0;z-index:1000;height:88px;background:#fff;
+                transition:all .3s ease;
+            }
+            .topnav.scrolled{box-shadow:0 2px 8px rgba(26,26,46,.06)}
+            .topnav-container{display:flex;align-items:center;justify-content:space-between;height:100%}
+            .logo{display:flex;align-items:center}
+            .logo img{height:80px;width:auto}
+            .nav-desktop{
+                position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:28px;
+            }
+            .nav-actions{display:flex;align-items:center;gap:16px}
+            .nav-link{font-size:.85rem;font-weight:500;letter-spacing:.5px;white-space:nowrap;position:relative}
+            .lang-toggle{font-size:.85rem;font-weight:500;letter-spacing:.5px;display:inline-flex;align-items:center}
+            .cart-link{background:none;border:none;padding:0;cursor:pointer}
+            .cart-icon{width:22px;height:22px}
+            .mobile-menu-btn{display:none;flex-direction:column;gap:5px;padding:4px}
+            .mobile-menu-btn span{width:24px;height:2px;background:var(--text,#1a1a2e);transition:.3s}
+            .mobile-menu{
+                position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:1001;
+                padding:80px 24px 24px;display:none;
+            }
+            .mobile-menu.lweb-open{display:block}
+            .mobile-close{position:absolute;top:24px;right:24px;width:32px;height:32px}
+            .mobile-nav{display:flex;flex-direction:column;gap:24px}
+            .mobile-nav a{font-size:1.5rem}
+            @media (max-width:768px){
+                .nav-desktop{display:none}
+                .mobile-menu-btn{display:flex}
+                .lang-toggle{display:none}
+            }
+        </style>
+        <header class="topnav">
+            <div class="topnav-container container">
+                <a href="/" class="logo" aria-label="Vasilia 首页">
+                    <img src="/vasilia_website_base/static/src/source/images/Topnav/logo.png" alt="LUXE"/>
+                </a>
+
+                <nav class="nav-desktop" aria-label="主导航">
+                    <a t-att-href="url_localized('/shop')" class="nav-link">产品系列</a>
+                    <a t-att-href="url_localized('/shop/new-arrivals')" class="nav-link">新品专区</a>
+                    <a t-att-href="url_localized('/shop')" class="nav-link">礼盒套装</a>
+                    <a t-att-href="url_localized('/')" class="nav-link">品牌故事</a>
+                    <a t-att-href="url_localized('/')" class="nav-link">客户服务</a>
+                    <a t-att-href="url_localized('/blog')" class="nav-link">美妆资讯</a>
+                    <a t-att-href="url_localized('/')" class="nav-link">肌肤测评</a>
+                    <a t-att-href="url_localized('/')" class="nav-link">联系我们</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <a t-if="lweb_resolved" class="lang-toggle js_change_lang"
+                       t-att-href="url_localized(url=request.httprequest.path, lang_code=lweb_resolved.code, force_default_lang=True)"
+                       t-att-data-url_code="lweb_resolved.url_code"
+                       t-att-title="'CN' if (lweb_resolved.code or '').startswith('zh') else '英文'">
+                        <span>
+                            <t t-if="(lweb_resolved.code or '').startswith('zh')">CN</t>
+                            <t t-else="">英文</t>
+                        </span>
+                    </a>
+                    <button type="button" class="cart-link" aria-label="购物袋">
+                        <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 01-8 0"></path>
+                        </svg>
+                    </button>
+                    <button type="button" class="mobile-menu-btn" data-lweb-burger="1" aria-label="打开菜单">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="移动菜单">
+                <button type="button" class="mobile-close" data-lweb-close="1" aria-label="关闭菜单">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <nav class="mobile-nav" data-lweb-nav="1" aria-label="移动导航">
+                    <a t-att-href="url_localized('/shop')">产品系列</a>
+                    <a t-att-href="url_localized('/shop/new-arrivals')">新品专区</a>
+                    <a t-att-href="url_localized('/shop')">礼盒套装</a>
+                    <a t-att-href="url_localized('/aboutus')">品牌故事</a>
+                    <a t-att-href="url_localized('/contactus')">客户服务</a>
+                    <a t-att-href="url_localized('/blog')">美妆资讯</a>
+                    <a t-att-href="url_localized('/')">肌肤测评</a>
+                    <a t-att-href="url_localized('/contactus')">联系我们</a>
+                </nav>
+            </div>
+        </header>
+    </template>
+</odoo>

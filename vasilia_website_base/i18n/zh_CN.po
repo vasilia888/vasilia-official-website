@@ -1,0 +1,418 @@
+# Translation of vasilia_website_base (Chinese Simplified). Source (msgid) is Simplified Chinese from views.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-25 00:00+0000\n"
+"PO-Revision-Date: 2026-04-25 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "$250以上"
+msgstr "$250以上"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "Vasilia | 奢华美妆与护肤"
+msgstr "Vasilia | 奢华美妆与护肤"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "Vasilia 首页"
+msgstr "Vasilia 首页"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "vasilia创立于2013年，源于一个简单的信念：每个人都值得对自己的肌肤充满自信。我们的皮肤科医生和化妆品科学家团队不懈努力，创造出在保证安全和可持续性的同时能带来显著效果的配方。"
+msgstr "vasilia创立于2013年，源于一个简单的信念：每个人都值得对自己的肌肤充满自信。我们的皮肤科医生和化妆品科学家团队不懈努力，创造出在保证安全和可持续性的同时能带来显著效果的配方。"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "© 2024 vasilia. 保留所有权利。"
+msgstr "© 2024 vasilia. 保留所有权利。"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "为您的独特需求而精心打造"
+msgstr "为您的独特需求而精心打造"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "主导航"
+msgstr "主导航"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "了解更多"
+msgstr "了解更多"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "产品分类"
+msgstr "产品分类"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "产品系列"
+msgstr "产品系列"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "以前沿科研为支撑。"
+msgstr "以前沿科研为支撑。"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "以科研为基底，打造兼具触感与功效的奢护体验。"
+msgstr "以科研为基底，打造兼具触感与功效的奢护体验。"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "价格从低到高"
+msgstr "价格从低到高"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "价格从高到低"
+msgstr "价格从高到低"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "价格区间"
+msgstr "价格区间"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "健康"
+msgstr "健康"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "全部价格"
+msgstr "全部价格"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "关于"
+msgstr "关于"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "关闭菜单"
+msgstr "关闭菜单"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_newsletter_section
+msgid "加入vasilia尊享会"
+msgstr "加入vasilia尊享会"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "可持续美妆"
+msgstr "可持续美妆"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "品牌承诺"
+msgstr "品牌承诺"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "品牌故事"
+msgstr "品牌故事"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "天然成分"
+msgstr "天然成分"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "客户服务"
+msgstr "客户服务"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "小红书"
+msgstr "小红书"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "常见问题"
+msgstr "常见问题"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "年科研经验"
+msgstr "年科研经验"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "彩妆"
+msgstr "彩妆"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "微信"
+msgstr "微信"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "微博"
+msgstr "微博"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "我们的配方融合了大自然最优质的成分与前沿科技"
+msgstr "我们的配方融合了大自然最优质的成分与前沿科技"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "打开菜单"
+msgstr "打开菜单"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "护发"
+msgstr "护发"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "护肤"
+msgstr "护肤"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "护肤服务"
+msgstr "护肤服务"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "排序："
+msgstr "排序："
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_newsletter_section
+msgid "探索系列"
+msgstr "探索系列"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_new_arrivals
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "新品"
+msgstr "新品"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_new_arrivals
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "新品专区"
+msgstr "新品专区"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_new_arrivals
+msgid "最新上新，优先体验"
+msgstr "最新上新，优先体验"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "最新上架"
+msgstr "最新上架"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "最热门"
+msgstr "最热门"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "服务"
+msgstr "服务"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "服务条款"
+msgstr "服务条款"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "查看全部"
+msgstr "查看全部"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "款产品"
+msgstr "款产品"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "清除筛选"
+msgstr "清除筛选"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "源自最优质的自然产地。"
+msgstr "源自最优质的自然产地。"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "源自珍稀植物精粹，融合诺贝尔奖级科研技术 — 唤醒肌肤本真光采，绽放自信魅力 — 为追求卓越的您，打造专属奢华护肤体验"
+msgstr "源自珍稀植物精粹，融合诺贝尔奖级科研技术 — 唤醒肌肤本真光采，绽放自信魅力 — 为追求卓越的您，打造专属奢华护肤体验"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "满意顾客"
+msgstr "满意顾客"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "用爱与科学打造"
+msgstr "用爱与科学打造"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "畅销"
+msgstr "畅销"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "礼盒套装"
+msgstr "礼盒套装"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "科学"
+msgstr "科学"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "科学研发"
+msgstr "科学研发"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "科学精准"
+msgstr "科学精准"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "科研"
+msgstr "科研"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "移动导航"
+msgstr "移动导航"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "移动菜单"
+msgstr "移动菜单"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_newsletter_section
+msgid "第一时间获取新品发布和美妆资讯"
+msgstr "第一时间获取新品发布和美妆资讯"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_products
+msgid "筛选"
+msgstr "筛选"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "精选"
+msgstr "精选"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "精选系列"
+msgstr "精选系列"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "纯净成分、科学精准、可持续美妆。"
+msgstr "纯净成分、科学精准、可持续美妆。"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "美妆资讯"
+msgstr "美妆资讯"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "联系我们"
+msgstr "联系我们"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "肌肤测评"
+msgstr "肌肤测评"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "致力于环境保护责任。"
+msgstr "致力于环境保护责任。"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "购物"
+msgstr "购物"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_topnav
+msgid "购物袋"
+msgstr "购物袋"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_newsletter_section
+msgid "输入您的邮箱"
+msgstr "输入您的邮箱"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_back_to_top
+msgid "返回顶部"
+msgstr "返回顶部"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "遇见你的自然之美"
+msgstr "遇见你的自然之美"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "配图"
+msgstr "配图"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_footer
+msgid "隐私政策"
+msgstr "隐私政策"
+
+#. module: vasilia_website_base
+#: model_terms:ir.ui.view,arch_db:vasilia_website_base.lweb_homepage
+msgid "零动物测试"
+msgstr "零动物测试"
+

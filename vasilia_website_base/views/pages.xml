@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========= 页面：主语言简体中文 ========= -->
+    <template id="lweb_homepage" name="L Web Homepage">
+        <t t-call="website.layout">
+            <t t-set="title">Vasilia | 奢华美妆与护肤</t>
+            <t t-set="no_header" t-value="True"/>
+            <t t-set="no_footer" t-value="True"/>
+            <link rel="stylesheet" href="/vasilia_website_base/static/src/css/l_web.css"/>
+            <script type="text/javascript" src="/vasilia_website_base/static/src/js/l_web.js"></script>
+            <t t-call="vasilia_website_base.lweb_topnav"/>
+
+            <main class="lweb-page">
+                <section class="lweb-banner lweb-banner--hero">
+                    <div class="lweb-banner__bg">
+                        <video class="lweb-banner__video" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" poster="/vasilia_website_base/static/src/source/images/home/Image-1.jpg">
+                            <source src="/vasilia_website_base/static/src/source/videos/banner.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                    <div class="lweb-banner__overlay"></div>
+                    <div class="lweb-banner__content container">
+                        <h1 class="lweb-banner__title">
+                            <t t-if="((request.lang and request.lang.code) or request.env.context.get('lang') or '').startswith('en')">Discover Your Natural Radiance</t>
+                            <t t-else="">遇见你的自然之美</t>
+                        </h1>
+                        <p class="lweb-banner__subtitle">
+                            <t t-if="((request.lang and request.lang.code) or request.env.context.get('lang') or '').startswith('en')">Born from rare botanical extracts, powered by Nobel-winning science — Awaken your skin's innate radiance and confidence</t>
+                            <t t-else="">源自珍稀植物精粹，融合诺贝尔奖级科研技术 — 唤醒肌肤本真光采，绽放自信魅力 — 为追求卓越的您，打造专属奢华护肤体验</t>
+                        </p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="container">
+                        <div class="lweb-section-intro text-center">
+                            <h2 class="section-title">品牌承诺</h2>
+                            <p class="section-subtitle">纯净成分、科学精准、可持续美妆。</p>
+                        </div>
+
+                        <div class="grid grid-3">
+                            <div class="lweb-feature-card">
+                                <div class="lweb-feature-image">
+                                    <img src="/vasilia_website_base/static/src/source/images/hufuyi/1.jpg" alt="配图"/>
+                                </div>
+                                <h3>天然成分</h3>
+                                <p>源自最优质的自然产地。</p>
+                            </div>
+                            <div class="lweb-feature-card">
+                                <div class="lweb-feature-image">
+                                    <img src="/vasilia_website_base/static/src/source/images/hufuyi/2.jpg" alt="配图"/>
+                                </div>
+                                <h3>科学精准</h3>
+                                <p>以前沿科研为支撑。</p>
+                            </div>
+                            <div class="lweb-feature-card">
+                                <div class="lweb-feature-image">
+                                    <img src="/vasilia_website_base/static/src/source/images/hufuyi/4.jpg" alt="配图"/>
+                                </div>
+                                <h3>可持续美妆</h3>
+                                <p>致力于环境保护责任。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="lweb-stats" data-lweb-stats="1">
+                    <div class="container">
+                        <div class="lweb-stats__grid">
+                            <div class="lweb-stat">
+                                <div class="lweb-stat__icon">✦</div>
+                                <div class="lweb-stat__number" data-lweb-number="98" data-lweb-suffix="%">0%</div>
+                                <div class="lweb-stat__label">天然成分</div>
+                            </div>
+                            <div class="lweb-stat">
+                                <div class="lweb-stat__icon">◇</div>
+                                <div class="lweb-stat__number" data-lweb-number="50" data-lweb-suffix="K+">0</div>
+                                <div class="lweb-stat__label">满意顾客</div>
+                            </div>
+                            <div class="lweb-stat">
+                                <div class="lweb-stat__icon">✧</div>
+                                <div class="lweb-stat__number" data-lweb-number="15" data-lweb-suffix="+">0</div>
+                                <div class="lweb-stat__label">年科研经验</div>
+                            </div>
+                            <div class="lweb-stat">
+                                <div class="lweb-stat__icon">✿</div>
+                                <div class="lweb-stat__number lweb-animate">∞</div>
+                                <div class="lweb-stat__label">零动物测试</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section lweb-bg-section">
+                    <div class="container">
+                        <div class="grid grid-2 lweb-feature-large">
+                            <div class="lweb-feature-text">
+                                <span class="lweb-section-tag">
+                                    <t t-if="((request.lang and request.lang.code) or request.env.context.get('lang') or '').startswith('en')">Science</t>
+                                    <t t-else="">科学</t>
+                                </span>
+                                <h2 class="section-title">科学研发</h2>
+                                <p class="lweb-section-desc">以科研为基底，打造兼具触感与功效的奢护体验。</p>
+                                <a class="btn btn-outline" t-att-href="url_localized('/shop')">了解更多</a>
+                            </div>
+                            <div class="lweb-feature-image-large">
+                                <img src="/vasilia_website_base/static/src/source/images/hufas/shenhuli/Rectangle-466.jpg" alt="科研"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="container">
+                        <div class="lweb-section-intro text-center">
+                            <span class="lweb-section-tag">
+                                <t t-if="((request.lang and request.lang.code) or request.env.context.get('lang') or '').startswith('en')">COLLECTION</t>
+                                <t t-else="">精选</t>
+                            </span>
+                            <h2 class="section-title">精选系列</h2>
+                            <p class="section-subtitle">我们的配方融合了大自然最优质的成分与前沿科技</p>
+                        </div>
+
+                        <div class="grid grid-4">
+                            <t t-foreach="featured_products" t-as="p">
+                                <div class="lweb-product-card">
+                                    <div class="lweb-product-image">
+                                        <img t-att-src="p['image']" t-att-alt="p['name_cn']"/>
+                                        <t t-if="p.get('tag') == 'new'">
+                                            <span class="lweb-product-tag">
+                                                <t t-if="((request.lang and request.lang.code) or request.env.context.get('lang') or '').startswith('en')">NEW</t>
+                                                <t t-else="">新品</t>
+                                            </span>
+                                        </t>
+                                        <t t-if="p.get('tag') == 'hot'">
+                                            <span class="lweb-product-tag">
+                                                <t t-if="((request.lang and request.lang.code) or request.env.context.get('lang') or '').startswith('en')">BEST SELLER</t>
+                                                <t t-else="">畅销</t>
+                                            </span>
+                                        </t>
+                                        <div class="lweb-product-actions">
+                                            <button type="button" class="lweb-quick-add">了解更多</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="lweb-product-name"><t t-esc="p['name_cn']"/></h3>
+                                        <p class="lweb-product-price">$<t t-esc="p['price']"/></p>
+                                        <div class="lweb-product-rating">
+                                            <span class="lweb-stars">★ <t t-esc="p['rating']"/></span>
+                                            <span>(<t t-esc="p['reviews']"/>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a class="btn btn-primary" t-att-href="url_localized('/shop')">查看全部</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section lweb-story">
+                    <div class="container">
+                        <div class="grid grid-2 lweb-feature-large">
+                            <div class="lweb-feature-image-large">
+                                <img src="/vasilia_website_base/static/src/source/images/hufas/baos/Rectangle-462.jpg" alt="品牌故事"/>
+                            </div>
+                            <div class="lweb-feature-text">
+                                <span class="lweb-section-tag">
+                                    <t t-if="((request.lang and request.lang.code) or request.env.context.get('lang') or '').startswith('en')">OUR STORY</t>
+                                    <t t-else="">品牌故事</t>
+                                </span>
+                                <h2 class="section-title">用爱与科学打造</h2>
+                                <p class="lweb-section-desc">vasilia创立于2013年，源于一个简单的信念：每个人都值得对自己的肌肤充满自信。我们的皮肤科医生和化妆品科学家团队不懈努力，创造出在保证安全和可持续性的同时能带来显著效果的配方。</p>
+                                <a class="btn btn-outline" t-att-href="url_localized('/shop')">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <t t-call="vasilia_website_base.lweb_newsletter_section"/>
+            <t t-call="vasilia_website_base.lweb_footer"/>
+            <t t-call="vasilia_website_base.lweb_back_to_top"/>
+        </t>
+    </template>
+
+    <template id="lweb_products" name="L Web Products">
+        <t t-call="website.layout">
+            <t t-set="title">产品系列</t>
+            <t t-set="no_header" t-value="True"/>
+            <t t-set="no_footer" t-value="True"/>
+            <link rel="stylesheet" href="/vasilia_website_base/static/src/css/l_web.css"/>
+            <script type="text/javascript" src="/vasilia_website_base/static/src/js/l_web.js"></script>
+            <t t-call="vasilia_website_base.lweb_topnav"/>
+
+            <main class="lweb-page">
+                <section class="lweb-banner lweb-banner--mini">
+                    <div class="lweb-banner__bg">
+                        <div class="lweb-banner__image" style="background-image:url('/vasilia_website_base/static/src/source/images/products/Image-7.jpg')"></div>
+                    </div>
+                    <div class="lweb-banner__overlay"></div>
+                    <div class="lweb-banner__content container">
+                        <h1 class="lweb-banner__title">产品系列</h1>
+                        <p class="lweb-banner__subtitle">为您的独特需求而精心打造</p>
+                    </div>
+                </section>
+
+                <section class="section products-page">
+                    <div class="container">
+                        <div class="products-layout">
+                            <aside class="products-sidebar">
+                                <div class="filter-panel">
+                                    <div class="filter-header">
+                                        <h3>筛选</h3>
+                                        <button class="reset-btn" type="button">清除筛选</button>
+                                    </div>
+                                    <div class="filter-section">
+                                        <button class="filter-section-title" type="button">
+                                            <span>产品分类</span>
+                                        </button>
+                                        <div class="category-filter">
+                                            <div class="primary-categories">
+                                                <button class="cat-btn" type="button" data-category="skincare">护肤</button>
+                                                <button class="cat-btn" type="button" data-category="makeup">彩妆</button>
+                                                <button class="cat-btn" type="button" data-category="haircare">护发</button>
+                                                <button class="cat-btn" type="button" data-category="health">健康</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-section">
+                                        <button class="filter-section-title" type="button">
+                                            <span>价格区间</span>
+                                        </button>
+                                        <div class="filter-section-content">
+                                            <label class="filter-radio"><input type="radio" name="price-range" value="all" checked="checked"/><span class="radio-custom"></span><span>全部价格</span></label>
+                                            <label class="filter-radio"><input type="radio" name="price-range" value="0-80"/><span class="radio-custom"></span><span>$0-$80</span></label>
+                                            <label class="filter-radio"><input type="radio" name="price-range" value="80-150"/><span class="radio-custom"></span><span>$80-$150</span></label>
+                                            <label class="filter-radio"><input type="radio" name="price-range" value="150-250"/><span class="radio-custom"></span><span>$150-$250</span></label>
+                                            <label class="filter-radio"><input type="radio" name="price-range" value="250+"/><span class="radio-custom"></span><span>$250以上</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+
+                            <div class="products-main">
+                                <div class="products-header">
+                                    <div class="header-left">
+                                        <p class="results-count"><t t-esc="len(products)"/><span> 款产品</span></p>
+                                    </div>
+                                    <div class="sort-component">
+                                        <label>排序：</label>
+                                        <select data-sort="products">
+                                            <option value="popular">最热门</option>
+                                            <option value="newest">最新上架</option>
+                                            <option value="price-asc">价格从低到高</option>
+                                            <option value="price-desc">价格从高到低</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-3">
+                                    <t t-foreach="products" t-as="p">
+                                        <div class="product-card" t-att-data-category="p.get('category') or 'skincare'" t-att-data-price="p['price']" t-att-data-reviews="p['reviews']" t-att-data-id="p['id']" t-att-data-tag="p.get('tag') or ''">
+                                            <div class="product-image">
+                                                <img t-att-src="p['image']" t-att-alt="p['name_cn']"/>
+                                                <t t-if="p.get('tag') == 'new'">
+                                                    <span class="product-tag">
+                                                        <t t-if="((request.lang and request.lang.code) or request.env.context.get('lang') or '').startswith('en')">NEW</t>
+                                                        <t t-else="">新品</t>
+                                                    </span>
+                                                </t>
+                                                <t t-if="p.get('tag') == 'hot'">
+                                                    <span class="product-tag">
+                                                        <t t-if="((request.lang and request.lang.code) or request.env.context.get('lang') or '').startswith('en')">BEST SELLER</t>
+                                                        <t t-else="">畅销</t>
+                                                    </span>
+                                                </t>
+                                            </div>
+                                            <div class="product-info">
+                                                <h3 class="product-name"><t t-esc="p['name_cn']"/></h3>
+                                                <p class="product-price">$<t t-esc="p['price']"/></p>
+                                                <div class="product-rating">
+                                                    <span class="stars">★ <t t-esc="p['rating']"/></span>
+                                                    <span>(<t t-esc="p['reviews']"/>)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <t t-call="vasilia_website_base.lweb_newsletter_section"/>
+            <t t-call="vasilia_website_base.lweb_footer"/>
+            <t t-call="vasilia_website_base.lweb_back_to_top"/>
+        </t>
+    </template>
+
+    <template id="lweb_new_arrivals" name="L Web New Arrivals">
+        <t t-call="website.layout">
+            <t t-set="title">新品专区</t>
+            <t t-set="no_header" t-value="True"/>
+            <t t-set="no_footer" t-value="True"/>
+            <link rel="stylesheet" href="/vasilia_website_base/static/src/css/l_web.css"/>
+            <script type="text/javascript" src="/vasilia_website_base/static/src/js/l_web.js"></script>
+            <t t-call="vasilia_website_base.lweb_topnav"/>
+
+            <main class="lweb-page">
+                <section class="lweb-banner lweb-banner--mini">
+                    <div class="lweb-banner__bg">
+                        <div class="lweb-banner__image" style="background-image:url('/vasilia_website_base/static/src/source/images/products/Image-6.jpg')"></div>
+                    </div>
+                    <div class="lweb-banner__overlay"></div>
+                    <div class="lweb-banner__content container">
+                        <h1 class="lweb-banner__title">新品专区</h1>
+                        <p class="lweb-banner__subtitle">最新上新，优先体验</p>
+                    </div>
+                </section>
+
+                <section class="section lweb-newarrivals-section">
+                    <div class="container">
+                        <div class="lweb-products-grid lweb-products-grid--new">
+                            <t t-foreach="products" t-as="p">
+                                <div class="lweb-product-card">
+                                    <div class="lweb-product-image">
+                                        <img t-att-src="p['image']" t-att-alt="p['name_cn']"/>
+                                        <span class="lweb-product-tag">
+                                            <t t-if="((request.lang and request.lang.code) or request.env.context.get('lang') or '').startswith('en')">NEW</t>
+                                            <t t-else="">新品</t>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h3 class="lweb-product-name"><t t-esc="p['name_cn']"/></h3>
+                                        <p class="lweb-product-price">$<t t-esc="p['price']"/></p>
+                                        <div class="lweb-product-rating">
+                                            <span class="lweb-stars">★ <t t-esc="p['rating']"/></span>
+                                            <span>(<t t-esc="p['reviews']"/>)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <t t-call="vasilia_website_base.lweb_newsletter_section"/>
+            <t t-call="vasilia_website_base.lweb_footer"/>
+            <t t-call="vasilia_website_base.lweb_back_to_top"/>
+        </t>
+    </template>
+</odoo>

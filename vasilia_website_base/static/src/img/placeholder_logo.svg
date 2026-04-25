@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 240 80" role="img" aria-label="Vasilia">
+  <rect width="240" height="80" rx="12" fill="#ffffff"/>
+  <rect x="2" y="2" width="236" height="76" rx="10" fill="#f5f3ff" stroke="#e8e5f3" stroke-width="2"/>
+  <text x="120" y="50" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="6" text-anchor="middle" fill="#1a1a2e">
+    VASILIA
+  </text>
+</svg>
+
