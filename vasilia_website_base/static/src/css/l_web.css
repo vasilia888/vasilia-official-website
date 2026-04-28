@@ -34,6 +34,26 @@ body.lweb-no-scroll { overflow: hidden; }
 body.lweb-site footer:not(.lweb-footer) { display: none !important; }
 body.lweb-site .o_footer { display: none !important; }
 body.lweb-site { font-size: 16px; }
+
+/* Force LTR layout for the public site, even when the active Odoo language is RTL
+   (e.g. Arabic installed on odoo.sh trial DBs). Templates also set dir="ltr" on
+   the main containers; this rule is the CSS-side belt-and-suspenders. */
+body.lweb-site,
+body.lweb-site .topnav,
+body.lweb-site .topnav-container,
+body.lweb-site .nav-desktop,
+body.lweb-site .nav-actions,
+body.lweb-site .mobile-menu,
+body.lweb-site .lweb-page,
+body.lweb-site .lweb-footer,
+body.lweb-site .newsletter-section,
+#wrapwrap body.lweb-site .topnav,
+#wrapwrap body.lweb-site .lweb-page,
+#wrapwrap body.lweb-site .lweb-footer,
+#wrapwrap body.lweb-site .newsletter-section {
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 img { max-width: 100%; height: auto; display: block; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }

@@ -1,6 +1,6 @@
 {
     "name": "Vasilia Website Base",
-    "version": "18.0.1.0.9",
+    "version": "18.0.1.1.0",
     "category": "Website",
     "summary": "Vasilia-style homepage, products and new arrivals pages",
     "author": "Grit",

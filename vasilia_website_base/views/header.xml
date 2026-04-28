@@ -42,7 +42,7 @@
                 .lang-toggle{display:none}
             }
         </style>
-        <header class="topnav">
+        <header class="topnav" dir="ltr">
             <div class="topnav-container container">
                 <a href="/" class="logo" aria-label="Vasilia 首页">
                     <img src="/vasilia_website_base/static/src/source/images/Topnav/logo.png" alt="LUXE"/>
@@ -82,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="移动菜单">
+            <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="移动菜单" dir="ltr">
                 <button type="button" class="mobile-close" data-lweb-close="1" aria-label="关闭菜单">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="18" y1="6" x2="6" y2="18"></line>

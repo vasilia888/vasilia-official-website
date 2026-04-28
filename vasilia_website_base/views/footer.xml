@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="lweb_footer" name="L Web Footer">
-        <footer class="lweb-footer footer">
+        <footer class="lweb-footer footer" dir="ltr">
             <div class="footer-container container">
                 <div class="footer-grid">
                     <div class="footer-brand">
@@ -74,7 +74,7 @@
     </template>
 
     <template id="lweb_newsletter_section" name="L Web Newsletter Section">
-        <section class="newsletter-section">
+        <section class="newsletter-section" dir="ltr">
             <div class="container">
                 <div class="newsletter-content">
                     <h2>加入vasilia尊享会</h2>
@@ -89,7 +89,7 @@
     </template>
 
     <template id="lweb_back_to_top" name="L Web Back To Top">
-        <button class="back-to-top" type="button" aria-label="返回顶部">
+        <button class="back-to-top" type="button" aria-label="返回顶部" dir="ltr">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="18 15 12 9 6 15"></polyline>
             </svg>

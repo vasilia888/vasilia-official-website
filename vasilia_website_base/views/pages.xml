@@ -10,7 +10,7 @@
             <script type="text/javascript" src="/vasilia_website_base/static/src/js/l_web.js"></script>
             <t t-call="vasilia_website_base.lweb_topnav"/>
 
-            <main class="lweb-page">
+            <main class="lweb-page" dir="ltr">
                 <section class="lweb-banner lweb-banner--hero">
                     <div class="lweb-banner__bg">
                         <video class="lweb-banner__video" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" poster="/vasilia_website_base/static/src/source/images/home/Image-1.jpg">
@@ -194,7 +194,7 @@
             <script type="text/javascript" src="/vasilia_website_base/static/src/js/l_web.js"></script>
             <t t-call="vasilia_website_base.lweb_topnav"/>
 
-            <main class="lweb-page">
+            <main class="lweb-page" dir="ltr">
                 <section class="lweb-banner lweb-banner--mini">
                     <div class="lweb-banner__bg">
                         <div class="lweb-banner__image" style="background-image:url('/vasilia_website_base/static/src/source/images/products/Image-7.jpg')"></div>
@@ -309,7 +309,7 @@
             <script type="text/javascript" src="/vasilia_website_base/static/src/js/l_web.js"></script>
             <t t-call="vasilia_website_base.lweb_topnav"/>
 
-            <main class="lweb-page">
+            <main class="lweb-page" dir="ltr">
                 <section class="lweb-banner lweb-banner--mini">
                     <div class="lweb-banner__bg">
                         <div class="lweb-banner__image" style="background-image:url('/vasilia_website_base/static/src/source/images/products/Image-6.jpg')"></div>
