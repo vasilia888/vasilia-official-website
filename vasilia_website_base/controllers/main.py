@@ -1,27 +1,64 @@
 from odoo import http
 from odoo.http import request
+from odoo.addons.website_sale.controllers.main import WebsiteSale
+from ..product_seed import CATEGORY_LABELS, LWEB_PRODUCTS
 
 
-class LWebController(http.Controller):
-    def _demo_products(self):
-        return [
-            {"id": 1, "name_cn": "晶透焕亮精华液", "price": 189, "rating": 4.8, "reviews": 342, "image": "/vasilia_website_base/static/src/source/images/jinghuaye/bushui/Rectangle-463.jpg", "tag": "hot", "category": "skincare"},
-            {"id": 2, "name_cn": "安瓶焕亮修护精华", "price": 129, "rating": 4.9, "reviews": 298, "image": "/vasilia_website_base/static/src/source/images/jinghuaye/bushui/Rectangle-464.jpg", "tag": "new", "category": "skincare"},
-            {"id": 3, "name_cn": "水光鲜妍精华", "price": 156, "rating": 4.7, "reviews": 489, "image": "/vasilia_website_base/static/src/source/images/jinghuaye/bushui/Rectangle-466.jpg", "tag": "new", "category": "skincare"},
-            {"id": 4, "name_cn": "海蓝水光精华", "price": 168, "rating": 4.7, "reviews": 242, "image": "/vasilia_website_base/static/src/source/images/jinghuaye/bushui/Rectangle-465.jpg", "tag": "", "category": "skincare"},
-            {"id": 5, "name_cn": "唇雾丝绒小方管", "price": 68, "rating": 4.8, "reviews": 156, "image": "/vasilia_website_base/static/src/source/images/meizhuang/1.jpg", "tag": "new", "category": "makeup"},
-            {"id": 6, "name_cn": "大地色眼影九宫格", "price": 238, "rating": 4.8, "reviews": 224, "image": "/vasilia_website_base/static/src/source/images/yanyingpang/dap/Rectangle-461.jpg", "tag": "new", "category": "makeup"},
-            {"id": 7, "name_cn": "亮肤遮瑕粉底液", "price": 186, "rating": 4.7, "reviews": 200, "image": "/vasilia_website_base/static/src/source/images/fengdi/bushui/1.jpg", "tag": "hot", "category": "makeup"},
-            {"id": 8, "name_cn": "晶透高光修容盘", "price": 229, "rating": 4.7, "reviews": 198, "image": "/vasilia_website_base/static/src/source/images/yanyingpang/dap/Rectangle-462.jpg", "tag": "", "category": "makeup"},
-            {"id": 9, "name_cn": "光感隔离妆前乳", "price": 149, "rating": 4.6, "reviews": 233, "image": "/vasilia_website_base/static/src/source/images/yanshuang/1/2.jpg", "tag": "new", "category": "health"},
-            {"id": 10, "name_cn": "四色矿物眼影盘", "price": 168, "rating": 4.8, "reviews": 214, "image": "/vasilia_website_base/static/src/source/images/yanyingpang/danse/5.jpg", "tag": "new", "category": "health"},
-            {"id": 11, "name_cn": "草本修护面膜", "price": 128, "rating": 4.8, "reviews": 274, "image": "/vasilia_website_base/static/src/source/images/hufas/shenhuli/Rectangle-469.jpg", "tag": "", "category": "skincare"},
-            {"id": 12, "name_cn": "修护精华喷雾", "price": 132, "rating": 4.8, "reviews": 221, "image": "/vasilia_website_base/static/src/source/images/hufas/shenhuli/Rectangle-466.jpg", "tag": "", "category": "haircare"},
-            {"id": 13, "name_cn": "密集睫毛膏", "price": 128, "rating": 4.8, "reviews": 324, "image": "/vasilia_website_base/static/src/source/images/hufuyi/yan/13.jpg", "tag": "new", "category": "haircare"},
-            {"id": 14, "name_cn": "纤长睫毛膏", "price": 128, "rating": 4.8, "reviews": 279, "image": "/vasilia_website_base/static/src/source/images/hufuyi/yan/14.jpg", "tag": "", "category": "haircare"},
-            {"id": 15, "name_cn": "双头防水睫毛膏", "price": 136, "rating": 4.7, "reviews": 197, "image": "/vasilia_website_base/static/src/source/images/hufuyi/yan/15.jpg", "tag": "", "category": "haircare"},
-            {"id": 16, "name_cn": "丝绒哑光口红", "price": 108, "rating": 4.7, "reviews": 201, "image": "/vasilia_website_base/static/src/source/images/hufuyi/ri/2.jpg", "tag": "new", "category": "makeup"},
-        ]
+class LWebController(WebsiteSale):
+    def _image_url(self, product_tmpl, size="image_512"):
+        stamp = int(product_tmpl.write_date.timestamp()) if product_tmpl.write_date else product_tmpl.id
+        return f"/web/image/product.template/{product_tmpl.id}/{size}?unique={stamp}"
+
+    def _category_key_from_product(self, product_tmpl):
+        reverse_labels = {label: key for key, label in CATEGORY_LABELS.items()}
+        for categ in product_tmpl.public_categ_ids:
+            if categ.name in reverse_labels:
+                return reverse_labels[categ.name]
+        if product_tmpl.categ_id and product_tmpl.categ_id.name in reverse_labels:
+            return reverse_labels[product_tmpl.categ_id.name]
+        return "skincare"
+
+    def _fallback_products(self):
+        fallback = []
+        for index, item in enumerate(LWEB_PRODUCTS, start=1):
+            fallback.append(
+                {
+                    "id": index,
+                    "name_cn": item["name"],
+                    "price": item["price"],
+                    "rating": item["rating"],
+                    "reviews": item["reviews"],
+                    "image": item["image"],
+                    "tag": item.get("tag") or "",
+                    "category": item["category"],
+                }
+            )
+        return fallback
+
+    def _get_website_products(self):
+        templates = (
+            request.env["product.template"]
+            .sudo()
+            .search([("is_published", "=", True), ("sale_ok", "=", True)], order="id asc")
+        )
+        if not templates:
+            return self._fallback_products()
+
+        products = []
+        for item in templates:
+            products.append(
+                {
+                    "id": item.id,
+                    "name_cn": item.name,
+                    "price": item.list_price,
+                    "rating": getattr(item, "rating_avg", 0.0) or 0.0,
+                    "reviews": getattr(item, "rating_count", 0) or 0,
+                    "image": self._image_url(item, "image_512"),
+                    "tag": (item.website_ribbon_id.name or "").lower() if item.website_ribbon_id else "",
+                    "category": self._category_key_from_product(item),
+                }
+            )
+        return products
 
     @http.route(
         ["/", "/home", "/page/homepage", "/lweb"],
@@ -32,7 +69,7 @@ class LWebController(http.Controller):
         priority=100,
     )
     def lweb_home(self, **kwargs):
-        products = self._demo_products()
+        products = self._get_website_products()
         return request.render(
             "vasilia_website_base.lweb_homepage",
             {
@@ -41,15 +78,20 @@ class LWebController(http.Controller):
         )
 
     @http.route(
-        ["/shop", "/shop/page/<int:page>", "/lweb/products"],
+        [
+            "/shop",
+            "/shop/page/<int:page>",
+            "/shop/category/<model('product.public.category'):category>",
+            "/shop/category/<model('product.public.category'):category>/page/<int:page>",
+            "/lweb/products",
+        ],
         type="http",
         auth="public",
         website=True,
         sitemap=True,
-        priority=200,
     )
-    def lweb_products(self, **kwargs):
-        products = self._demo_products()
+    def shop(self, page=0, category=None, search="", **kwargs):
+        products = self._get_website_products()
         return request.render("vasilia_website_base.lweb_products", {"products": products})
 
     @http.route(
@@ -61,6 +103,7 @@ class LWebController(http.Controller):
         priority=210,
     )
     def lweb_new_arrivals(self, **kwargs):
-        products = [p for p in self._demo_products() if p.get("tag") in ("new", "hot")]
+        products = [p for p in self._get_website_products() if p.get("tag") in ("new", "hot")]
         return request.render("vasilia_website_base.lweb_new_arrivals", {"products": products})
+
 

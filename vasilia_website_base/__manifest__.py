@@ -1,11 +1,11 @@
 {
     "name": "Vasilia Website Base",
-    "version": "18.0.1.1.0",
+    "version": "18.0.1.1.2",
     "category": "Website",
     "summary": "Vasilia-style homepage, products and new arrivals pages",
     "author": "Grit",
     "website": "https://ifangtech.com",
-    "depends": ["website"],
+    "depends": ["website", "website_sale"],
     "data": [
         "views/header.xml",
         "views/footer.xml",
